@@ -1,0 +1,173 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Variáveis */
+:root {
+    --cor-HeaderCabecalho: #dedddd;
+    --cor-fundo: #c7c7c1;
+    --cor-primaria: #97643e;
+    --cor-texto: #4A4A4A;
+    --cor-destaque: #939090;
+
+    --fonte-texto: 'Montserrat', sans-serif;
+    --fonte-destaque: 'Playfair Display', serif;
+    --fonte-titulo: 'Krona One', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: var(--cor-primaria);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.menu__logo {
+    height: 100px;
+}
+
+.menu__lista {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: var(--cor-HeaderCabecalho);
+    font-size: 22px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.menu__link:hover {
+    color: var(--cor-destaque);
+}
+
+/* Home */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/PraCasa/assets/cozinha home.png") no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding: 2rem;
+    height: 100vh;
+}
+
+#home__titulo {
+    color: var(--cor-HeaderCabecalho);
+    font-family: var(--fonte-titulo);
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    max-width: 700px;
+}
+
+/* Sobre */
+#sobre {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+#sobre__logo {
+    height: 30rem;
+}
+
+
+
+/* Seções */
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-family: var(--fonte-destaque);
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+}
+
+.section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Rodapé */
+#rodape {
+    background-color: var(--cor-HeaderCabecalho);
+    padding: 1rem;
+}
+
+#rodape__conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10rem;
+    padding-bottom: 1rem;
+}
+
+#creditos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape__credito {
+    align-items: flex-end;
+    padding-top: 1rem;
+}
+
+/* Catálogos */
+
+#catalogos {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 6rem;
+}
+
+#catalogos__conteudo {
+    flex-direction: column;
+}
+
+#catalogos__texto {
+    width: 40rem;
+}
+
+#catalogos__imgs {
+    flex-direction: row;
+}
+
+#catalogo_berneck {
+    height: 30rem;
+}
