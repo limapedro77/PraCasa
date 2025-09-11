@@ -44,19 +44,19 @@ body {
 }
 
 .menu__logo {
-    height: 100px;
+    height: 6.25rem;
 }
 
 .menu__lista {
     list-style: none;
     display: flex;
-    gap: 2.5rem;
+    gap: 1.7rem;
 }
 
 .menu__link {
     text-decoration: none;
     color: var(--cor-HeaderCabecalho);
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 300;
     transition: color 0.3s ease;
 }
@@ -85,7 +85,7 @@ body {
     font-size: 4.5rem;
     font-weight: 900;
     text-transform: uppercase;
-    max-width: 700px;
+    max-width: 43.75rem;
 }
 
 /* Sobre */
@@ -100,7 +100,6 @@ body {
 }
 
 /* Trabalhos */
-
 #trabalhos__imgs {
     width: 100%;
     display: flex;
@@ -110,8 +109,8 @@ body {
 }
 
 .trabalhos__img {
-    width: 280px;
-    height: 190px;
+    width: 17.5rem;
+    height: 12rem;
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -125,10 +124,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.trabalhos__subtitulo {}
-
 /* Catálogos */
-
 #catalogos {
     display: flex;
     flex-direction: row-reverse;
@@ -222,7 +218,7 @@ body {
 
 .section p {
     font-size: 1.1rem;
-    max-width: 800px;
+    max-width: 50rem;
     text-align: justify;
 }
 
@@ -248,10 +244,10 @@ body {
 
 .lightbox .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 1.25rem;
+    right: 1.875rem;
     color: white;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: bold;
     cursor: pointer;
 }
