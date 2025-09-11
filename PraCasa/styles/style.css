@@ -70,7 +70,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("/PraCasa/assets/cozinha home.png") no-repeat center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("/PraCasa/assets/galeria10.jpeg") no-repeat center;
     background-size: cover;
     text-align: center;
     padding: 2rem;
@@ -78,7 +80,7 @@ body {
 }
 
 #home__titulo {
-    color: var(--cor-HeaderCabecalho);
+    color: white;
     font-family: var(--fonte-titulo);
     font-size: 4.5rem;
     font-weight: 900;
@@ -97,31 +99,83 @@ body {
     height: 30rem;
 }
 
+/* Trabalhos */
 
-
-/* Seções */
-.section {
-    height: 100vh;
+#trabalhos__imgs {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
-    align-items: center;
-
-    padding: 2rem 10%;
-    text-align: center;
 }
 
-.section h2 {
-    font-family: var(--fonte-destaque);
-    font-size: 2.5rem;
-    color: var(--cor-primaria);
-    margin-bottom: 1.5rem;
+.trabalhos__img {
+    width: 280px;
+    height: 190px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    text-align: justify;
+.trabalhos__img:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+}
+
+#trabalhos__titulo {
+    margin-bottom: 2rem;
+}
+
+.trabalhos__subtitulo {}
+
+/* Catálogos */
+
+#catalogos {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 6rem;
+}
+
+#catalogos__imgs {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+#catalogos__conteudo {
+    flex-direction: column;
+}
+
+#catalogos__texto {
+    width: 30rem;
+}
+
+#catalogos__links {
+    text-decoration: none;
+    list-style: none;
+    color: #0000EE;
+}
+
+.catalogo_img {
+    height: 25rem;
+}
+
+.catalogo_img:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+}
+
+/* Cuidados */
+#cuidados {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.proibicao_imgs {
+    height: 15rem;
 }
 
 /* Rodapé */
@@ -148,26 +202,62 @@ body {
     padding-top: 1rem;
 }
 
-/* Catálogos */
 
-#catalogos {
+#logo_whatsapp {
+    width: 2rem;
+}
+
+/* Seções */
+.section {
+    height: 100vh;
     display: flex;
-    flex-direction: row-reverse;
-    gap: 6rem;
-}
-
-#catalogos__conteudo {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 10%;
+    text-align: center;
 }
 
-#catalogos__texto {
-    width: 40rem;
+.section h2 {
+    font-family: var(--fonte-destaque);
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
 }
 
-#catalogos__imgs {
-    flex-direction: row;
+.section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    text-align: justify;
 }
 
-#catalogo_berneck {
-    height: 30rem;
+/* lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
