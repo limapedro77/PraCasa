@@ -187,9 +187,8 @@ body {
 #rodape__conteudo {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 10rem;
-    padding-bottom: 1rem;
+    gap: 10%;
+    padding-bottom: 1%;
 }
 
 #creditos {
@@ -199,12 +198,7 @@ body {
 
 .rodape__credito {
     align-items: flex-end;
-    padding-top: 1rem;
-}
-
-
-#logo_whatsapp {
-    width: 2rem;
+    padding-top: 1%;
 }
 
 /* Seções */
