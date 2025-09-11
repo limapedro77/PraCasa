@@ -72,7 +72,7 @@ body {
     align-items: center;
     background:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url("/PraCasa/assets/galeria10.jpeg") no-repeat center;
+        url("/assets/galeria10.jpeg") no-repeat center;
     background-size: cover;
     text-align: center;
     padding: 2rem;
