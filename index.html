@@ -12,12 +12,11 @@
 
 <body>
 
-    <!-- Lightbox dos trabalhos -->
+    <!-- Lightbox -->
     <script>
         function openLightbox(element) {
             const lightbox = document.getElementById('lightbox');
             const content = document.getElementById('lightbox-content');
-
             content.innerHTML = '';
 
             if (element.tagName === 'IMG') {
@@ -25,6 +24,7 @@
                 img.src = element.src;
                 img.alt = element.alt;
                 content.appendChild(img);
+
             } else if (element.tagName === 'VIDEO') {
                 const video = document.createElement('video');
                 video.src = element.src;
@@ -32,7 +32,10 @@
                 video.autoplay = true;
                 video.loop = element.loop;
                 video.muted = element.muted;
-                video.setAttribute('aria-label', element.getAttribute('aria-label') || 'Vídeo');
+                video.setAttribute(
+                    'aria-label',
+                    element.getAttribute('aria-label') || 'Vídeo'
+                );
                 content.appendChild(video);
             }
 
@@ -40,12 +43,16 @@
         }
 
         function closeLightbox(event) {
-            if (event && event.target.id !== 'lightbox' && !event.target.classList.contains('close')) return;
+            if (
+                event &&
+                event.target.id !== 'lightbox' &&
+                !event.target.classList.contains('close')
+            ) return;
 
             const lightbox = document.getElementById('lightbox');
             const content = document.getElementById('lightbox-content');
-
             const video = content.querySelector('video');
+
             if (video) video.pause();
 
             content.innerHTML = '';
@@ -122,6 +129,7 @@
                     muted aria-label="Vídeo galeria 11"></video>
                 <video class="trabalhos__img" src="assets/galeria12.mp4" onclick="openLightbox(this)" controls loop
                     muted aria-label="Vídeo galeria 12"></video>
+
             </div>
 
             <div id="lightbox" class="lightbox" onclick="closeLightbox()">
