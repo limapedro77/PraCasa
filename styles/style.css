@@ -201,9 +201,10 @@ body {
 
 #rodape__conteudo {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10rem;
+    gap: 5rem;
     padding-bottom: 1rem;
 }
 
@@ -338,6 +339,11 @@ body {
         max-width: 95%;
         max-height: 80vh;
     }
+
+    #map-rodape {
+        height: 10rem;
+        width: 17rem;
+    }
 }
 
 @media(max-width: 768px) {
@@ -419,5 +425,10 @@ body {
     .lightbox-content img {
         max-width: 100%;
         max-height: 75vh;
+    }
+
+    #map-rodape {
+        height: 10rem;
+        width: 17rem;
     }
 }

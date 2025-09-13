@@ -12,6 +12,64 @@
 
 <body>
 
+    <script>
+        function initMap() {
+            const marcenaria = { lat: -23.475406928558428, lng: -46.63707108465663 };
+
+            const map = new google.maps.Map(document.getElementById("map-rodape"), {
+                zoom: 14,
+                center: marcenaria,
+                disableDefaultUI: true, // remove botões de zoom/street view
+            });
+
+            // Marcador da marcenaria
+            new google.maps.Marker({
+                position: marcenaria,
+                map: map,
+                title: "Marcenaria PraCasa",
+                icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+            });
+
+            // Geolocalização do usuário
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const usuario = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+
+                        // Marcador do usuário
+                        new google.maps.Marker({
+                            position: usuario,
+                            map: map,
+                            title: "Você está aqui",
+                            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                        });
+
+                        // Ajustar zoom para caber os dois pontos
+                        const bounds = new google.maps.LatLngBounds();
+                        bounds.extend(marcenaria);
+                        bounds.extend(usuario);
+                        map.fitBounds(bounds);
+
+
+                    }
+                );
+            }
+        }
+    </script>
+
+    <!-- Google Maps API -->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC92Dz1IO2_wMlchrs3sOhzVoWzNLhEWNw&callback=initMap">
+        </script>
+
+    <!-- Google Maps API -->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC92Dz1IO2_wMlchrs3sOhzVoWzNLhEWNw&callback=initMap">
+        </script>
+
     <!-- Lightbox -->
     <script>
         function openLightbox(element) {
@@ -58,6 +116,7 @@
             content.innerHTML = '';
             lightbox.style.display = 'none';
         }
+
     </script>
 
     <!-- Cabeçalho -->
@@ -89,7 +148,7 @@
                 <h2>Sobre Nós</h2>
                 <div id="sobre__texto">
                     <p>
-                        A marcenaria PraCasa tem a tradição na linha de móveis planejados e sob medida, com mais de 10
+                        A Marcenaria PraCasa tem a tradição na linha de móveis planejados e sob medida, com mais de 10
                         anos de experiência. Nosso compromisso é oferecer confiabilidade e qualidade, desde o primeiro
                         contato até a entrega final.
                         <br><br>
@@ -202,7 +261,11 @@
 
     <!-- Rodapé -->
     <footer class="rodape" id="rodape">
+
         <div id="rodape__conteudo">
+
+            <div id="map-rodape" style="height:15rem; width:23rem; border-radius:8px;"></div>
+
             <div>
                 <h3>Informações de Contato:</h3>
                 <p>
